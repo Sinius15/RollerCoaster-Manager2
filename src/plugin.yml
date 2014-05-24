@@ -1,0 +1,9 @@
+name: RCM2
+main: com.sinius15.rcm.Main
+author: Sinius15
+website: http://dev.bukkit.org/bukkit-plugins/rollercoaster-manager/
+version: 2.0a
+commands:
+   rcm:
+       description: base command.
+       usage: "Do /rcm help for all the available commands."
