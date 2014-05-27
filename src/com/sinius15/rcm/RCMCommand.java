@@ -11,8 +11,6 @@ public abstract class RCMCommand implements CommandExecutor{
 
 	protected Main parent;
 	
-	
-	
 	public abstract void execute(CommandSender sender, String[] args);
 	public abstract String getName();
 	public abstract String help();

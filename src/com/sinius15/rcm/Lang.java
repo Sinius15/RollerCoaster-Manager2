@@ -28,5 +28,7 @@ public class Lang {
 	public static final String THERE_ARE_NO_ROLLERCOASTERPOINTS_DEFINED  = "There are no rollercoaster-points defined.";
 	public static final String THIS_POINT_DOES_NOT_EXIST = "This point does not exist.";
 	public static final String UNEXISTING_WORLD = "This point is located in an unexisting world.";
+	public static final String IS_NOW_A = "is now a";
+	public static final String NOW_SPAWNS = "now spawns";
 
 }

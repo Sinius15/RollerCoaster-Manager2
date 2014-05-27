@@ -21,6 +21,7 @@ public class Main extends JavaPlugin{
 		commands.add(new ListCommand(this));
 		commands.add(new HelpCommand(this));
 		commands.add(new StartCommand(this));
+		commands.add(new SetCartCommand(this));
 	};
 	@Override
 	public void onEnable() {

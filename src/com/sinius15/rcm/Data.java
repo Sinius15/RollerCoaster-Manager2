@@ -66,7 +66,7 @@ public class Data {
 				return false;
 			}
 		}
-		RollerPoint p = new RollerPoint((int)loc.getX(), (int)loc.getY(), (int)loc.getZ(), loc.getWorld().getName(), name, type, RollerPoint.CART_NORMAL);
+		RollerPoint p = new RollerPoint((int)loc.getX(), (int)loc.getY(), (int)loc.getZ(), loc.getWorld().getName(), name, type, RollerPoint.Cart.EMPTY.toInt());
 		points.add(p);
 		
 		return true;
