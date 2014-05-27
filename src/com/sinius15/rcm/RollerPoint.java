@@ -13,7 +13,6 @@ public class RollerPoint implements Comparable<RollerPoint>{
 	
 	public static final int START = 0;
 	public static final int END = 1;
-	public static final int EMPTY = 9999;
 	public static final int CART_NORMAL = 0;
 	public static final int CART_CHEST = 1;
 	public static final int CART_FURNACE = 2;

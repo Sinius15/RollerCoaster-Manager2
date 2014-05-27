@@ -19,19 +19,15 @@ public class Main extends JavaPlugin{
 		commands.add(new AddCommand(this));
 		commands.add(new RemoveCommand(this));
 		commands.add(new ListCommand(this));
-		
-		data = new Data(this);
-
-		data.loadPoints();
-		
-		data.saveConfig();
-		System.out.println(data.toString());
-		
-
-		
+		commands.add(new HelpCommand(this));
+		commands.add(new StartCommand(this));
 	};
 	@Override
 	public void onEnable() {
+		data = new Data(this);
+		data.loadPoints();
+		data.saveConfig();
+		
 		getCommand("rcm").setExecutor(this);
 	}
 	

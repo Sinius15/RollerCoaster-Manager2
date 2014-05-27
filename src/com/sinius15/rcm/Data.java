@@ -90,7 +90,7 @@ public class Data {
 				return p;
 			}
 		}
-		return new RollerPoint(0,0,0,"a","EMPTY",RollerPoint.EMPTY, 0);
+		return null;
 	}
 
 	@Override

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<project name="RCM2" basedir=".">
+  <target name="jar">
+    <jar destfile="server\plugins\rcm.jar" basedir="bin">
+      <manifest>
+      </manifest>
+    </jar>
+  </target>
+</project> 
