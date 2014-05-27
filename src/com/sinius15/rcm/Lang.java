@@ -30,5 +30,6 @@ public class Lang {
 	public static final String UNEXISTING_WORLD = "This point is located in an unexisting world.";
 	public static final String IS_NOW_A = "is now a";
 	public static final String NOW_SPAWNS = "now spawns";
+	public static final String COULD_NOT_FIND_PLAYER = "Could not find player.";
 
 }

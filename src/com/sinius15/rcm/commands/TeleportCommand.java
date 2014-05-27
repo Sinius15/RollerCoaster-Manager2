@@ -11,16 +11,16 @@ import com.sinius15.rcm.Main;
 import com.sinius15.rcm.RCMCommand;
 import com.sinius15.rcm.RollerPoint;
 
-public class StartCommand extends RCMCommand{
+public class TeleportCommand extends RCMCommand{
 
-	public StartCommand(Main parent) {
+	public TeleportCommand(Main parent) {
 		super(parent);
 	}
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
 		if(args.length < 1){
-			sender.sendMessage(ChatColor.RED + Lang.HELP_START);
+			sender.sendMessage(ChatColor.RED + help());
 			return;
 		}
 		RollerPoint point = parent.data.getPointByName(args[0]);
@@ -33,33 +33,34 @@ public class StartCommand extends RCMCommand{
 			sender.sendMessage(ChatColor.RED + Lang.UNEXISTING_WORLD);
 			return;
 		}
+		Player who = null;
 		if(args.length > 1){
 			String playerName = args[1];
-			Player player = Bukkit.getPlayer(playerName);
-			if(playerName.equals(Lang.ME) && (player instanceof Player))
-				player = (Player) sender;
-			if(player != null && player.isOnline())
-				point.spawnCart().setPassenger(player);
+			who = Bukkit.getPlayer(playerName);
 		}else{
-			point.spawnCart();
+			if(sender instanceof Player)
+				who = (Player) sender;
 		}
+		if(who == null){
+			sender.sendMessage(ChatColor.YELLOW + Lang.COULD_NOT_FIND_PLAYER);
+			return;
+		}
+		who.teleport(point.getLoc());
 	}
 
 	@Override
 	public String getName() {
-		return "start";
+		return "teleport";
 	}
 
 	@Override
 	public String help() {
-		return Lang.HELP_START;
+		return Lang.HELP_TELEPORT;
 	}
 
 	@Override
 	public boolean onlyPlayer() {
 		return false;
 	}
-	
-	
 
 }

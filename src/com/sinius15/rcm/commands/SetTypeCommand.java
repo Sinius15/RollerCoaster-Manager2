@@ -35,9 +35,6 @@ public class SetTypeCommand extends RCMCommand{
 			return;
 		}
 		sender.sendMessage(ChatColor.YELLOW + point.name + " " + Lang.IS_NOW_A + " " +  Lang.POINT);
-		
-		
-		
 	}
 
 	@Override
