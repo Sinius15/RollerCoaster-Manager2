@@ -30,7 +30,11 @@ public class AddCommand extends RCMCommand{
 		String name = args[1];
 		
 		Player who = (Player) sender;
-		Block b = Util.getTargetBlock(who, 1000);
+		Block b = Util.getTargetBlock(who, 20);
+		if(b == null){
+			sender.sendMessage(ChatColor.YELLOW + Lang.NO_POINT);
+			return;
+		}
 		
 		Location loc = b.getLocation();
 		

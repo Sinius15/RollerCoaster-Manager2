@@ -1,5 +1,6 @@
 package com.sinius15.rcm;
 
+
 public class Lang {
 
 	public static final String NO_PERMISSION = "You do not have the permission for this command.";
@@ -15,6 +16,7 @@ public class Lang {
 	public static final String HELP_SET_CART = "/rcm setCart [name] [minecart/ chestCart/ furnaceCart/ tntCart/ hopperCart]";
 	public static final String HELP_SET_TYPE = "/rcm setType [name] [start/end]";
 	public static final String HELP_TELEPORT = "/rcm teleport [name] (player)";
+	public static final String HELP_SAVE = "/rcm save";
 	
 	public static final String START = "start";
 	public static final String END = "end";
@@ -31,5 +33,7 @@ public class Lang {
 	public static final String IS_NOW_A = "is now a";
 	public static final String NOW_SPAWNS = "now spawns";
 	public static final String COULD_NOT_FIND_PLAYER = "Could not find player.";
+	public static final String NO_POINT = "You did not point at a block. You have to point at a block within a 20 block radius.";
+	public static final String SAVE_DONE = "RollerPoints saved to config.";
 
 }

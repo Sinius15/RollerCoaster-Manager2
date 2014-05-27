@@ -19,10 +19,6 @@ public class Data {
 	public void loadPoints(){
 		parent.reloadConfig();
 		
-		if(!parent.getConfig().contains("rollerPointAmount")){
-			saveConfig();
-			return;
-		}
 		int i = 0;
 		while(parent.getConfig().getString("point." + i + ".x") != null){
 			points.add(new RollerPoint(
@@ -54,7 +50,7 @@ public class Data {
 			parent.getConfig().set("point." + i + ".x", p.x);
 			parent.getConfig().set("point." + i + ".y", p.y);
 			parent.getConfig().set("point." + i + ".z", p.z);
-			parent.getConfig().set("point." + i + ".whatToSpawn", p.whatToSpawn);
+			parent.getConfig().set("point." + i + ".whatToSpawn", p.whatToSpawn.toInt());
 			i++;
 		}
 		parent.saveConfig();

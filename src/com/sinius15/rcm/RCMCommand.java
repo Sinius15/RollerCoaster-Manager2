@@ -2,6 +2,7 @@ package com.sinius15.rcm;
 
 import java.util.Arrays;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -24,12 +25,12 @@ public abstract class RCMCommand implements CommandExecutor{
 			return false;
 		//yes this is my command
 		if(onlyPlayer() && !(sender instanceof Player)){
-			sender.sendMessage(Lang.ONLY_PLAYER);
+			sender.sendMessage(ChatColor.YELLOW + Lang.ONLY_PLAYER);
 			return true;
 		}
 		//yes i am in the right form
 		if(!checkPermission(sender)){
-			sender.sendMessage(Lang.NO_PERMISSION);
+			sender.sendMessage(ChatColor.YELLOW + Lang.NO_PERMISSION);
 			return true;
 		}
 		//yes i have permission

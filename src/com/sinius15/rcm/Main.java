@@ -22,14 +22,19 @@ public class Main extends JavaPlugin{
 		commands.add(new HelpCommand(this));
 		commands.add(new StartCommand(this));
 		commands.add(new SetCartCommand(this));
+		commands.add(new SaveCommand(this));
 	};
 	@Override
 	public void onEnable() {
 		data = new Data(this);
 		data.loadPoints();
-		data.saveConfig();
 		
 		getCommand("rcm").setExecutor(this);
+	}
+	
+	@Override
+	public void onDisable() {
+		data.saveConfig();
 	}
 	
 	@Override

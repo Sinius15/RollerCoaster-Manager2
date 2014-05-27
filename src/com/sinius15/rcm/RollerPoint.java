@@ -128,7 +128,7 @@ public class RollerPoint implements Comparable<RollerPoint>{
 			}
 		}
 		public static Cart getCart(String type){
-			type.toLowerCase();
+			type = type.toLowerCase();
 			switch (type) {
 				case "minecart": 
 					return EMPTY;
