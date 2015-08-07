@@ -22,16 +22,17 @@ public class Data {
 		int i = 0;
 		while(parent.getConfig().getString("point." + i + ".x") != null){
 			points.add(new RollerPoint(
-					parent.getConfig().getInt("point." + i + ".x"), 
-					parent.getConfig().getInt("point." + i + ".y"), 
-					parent.getConfig().getInt("point." + i + ".z"), 
+					new Location(null, 
+							parent.getConfig().getInt("point." + i + ".x"), 
+							parent.getConfig().getInt("point." + i + ".y"), 
+							parent.getConfig().getInt("point." + i + ".z")
+					),
 					parent.getConfig().getString("point." + i + ".world"), 
 					parent.getConfig().getString("point." + i + ".name"), 
 					parent.getConfig().getInt("point." + i + ".type"), 
 					parent.getConfig().getInt("point." + i + ".whatToSpawn")));
 			i++;
 		}
-		
 		
 	}
 	
@@ -62,7 +63,7 @@ public class Data {
 				return false;
 			}
 		}
-		RollerPoint p = new RollerPoint((int)loc.getX(), (int)loc.getY(), (int)loc.getZ(), loc.getWorld().getName(), name, type, RollerPoint.Cart.EMPTY.toInt());
+		RollerPoint p = new RollerPoint(loc, loc.getWorld().getName(), name, type, RollerPoint.Cart.EMPTY.toInt());
 		points.add(p);
 		
 		return true;

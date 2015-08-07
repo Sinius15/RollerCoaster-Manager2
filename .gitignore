@@ -1,3 +1,6 @@
 /bin/
 /server/
 /.externalToolBuilders/
+.classpath
+.project
+/.settings

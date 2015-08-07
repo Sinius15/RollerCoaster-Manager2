@@ -23,6 +23,7 @@ public class Main extends JavaPlugin{
 		commands.add(new StartCommand(this));
 		commands.add(new SetCartCommand(this));
 		commands.add(new SaveCommand(this));
+		commands.add(new TeleportCommand(this));
 	};
 	@Override
 	public void onEnable() {

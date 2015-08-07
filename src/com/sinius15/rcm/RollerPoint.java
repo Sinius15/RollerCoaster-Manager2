@@ -19,27 +19,21 @@ public class RollerPoint implements Comparable<RollerPoint>{
 	public int type;
 	public Cart whatToSpawn = Cart.EMPTY;
 	
-	public RollerPoint(){}
-	
-	public RollerPoint(int x, int y, int z, String world, String name, int type, int whatToSpawn){
-		this.x = x;
-		this.y = y;
-		this.z = z;
+	/**
+	 * @param loc where World is <b>always</b> null!
+	 * @param world the world name
+	 * @param name the name of the point
+	 * @param type the type of the point: start or end
+	 * @param whatToSpawn what cart to spawn.
+	 */
+	public RollerPoint(Location loc, String world, String name, int type, int whatToSpawn){
+		this.x = (int) loc.getX();
+		this.y = (int) loc.getY();
+		this.z = (int) loc.getZ();
 		this.world = world;
 		this.name = name;
 		this.type = type;
 		this.whatToSpawn = Cart.getCart(whatToSpawn);
-
-	}
-	
-	public RollerPoint(String x, String y, String z, String world, String name, String type, String whatToSpawn){
-		this.x = Integer.parseInt(x);
-		this.y = Integer.parseInt(y);
-		this.z = Integer.parseInt(z);
-		this.world = world;
-		this.name = name;
-		this.type = Integer.parseInt(type);
-		this.whatToSpawn = Cart.getCart(Integer.parseInt(whatToSpawn));
 	}
 	
 	public Location getLoc(){

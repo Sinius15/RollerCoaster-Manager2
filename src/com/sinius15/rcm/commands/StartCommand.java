@@ -59,7 +59,7 @@ public class StartCommand extends RCMCommand{
 	public boolean onlyPlayer() {
 		return false;
 	}
-	
-	
+
+
 
 }
